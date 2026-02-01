@@ -2,13 +2,28 @@
   "checks": [
     {
       "id": "1.1",
-      "name": "Check Guest Account",
-      "command": "Get-LocalUser -Name 'Guest' | Select-Object Name, Enabled"
+      "name": "Password History Requirement",
+      "command": "net accounts | Select-String 'Password history maintained'"
     },
     {
       "id": "1.2",
-      "name": "Verify Firewall Status",
+      "name": "Guest Account Status",
+      "command": "Get-LocalUser -Name 'Guest' | Select-Object Name, Enabled"
+    },
+    {
+      "id": "2.1",
+      "name": "Firewall Profile Status",
       "command": "Get-NetFirewallProfile | Select-Object Name, Enabled"
+    },
+    {
+      "id": "2.2",
+      "name": "Windows Defender Antivirus Status",
+      "command": "Get-MpComputerStatus | Select-Object RealTimeProtectionEnabled, AntivirusEnabled"
+    },
+    {
+      "id": "5.1",
+      "name": "Check for Remote Registry Service",
+      "command": "Get-Service -Name 'RemoteRegistry' | Select-Object Name, Status, StartType"
     }
   ]
 }
