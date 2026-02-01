@@ -1,0 +1,7 @@
+{
+  "supported_versions": {
+    "windows_10": "https://raw.githubusercontent.com/yourusername/cis-guardian/main/win10_bench.json",
+    "windows_11": "https://raw.githubusercontent.com/yourusername/cis-guardian/main/win11_bench.json",
+    "default": "https://raw.githubusercontent.com/yourusername/cis-guardian/main/default_bench.json"
+  }
+}

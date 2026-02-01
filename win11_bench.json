@@ -1,0 +1,14 @@
+{
+  "checks": [
+    {
+      "id": "1.1",
+      "name": "Check Guest Account Status",
+      "command": "Get-LocalUser -Name 'Guest' | Select-Object Enabled"
+    },
+    {
+      "id": "1.2",
+      "name": "Check Password Complexity",
+      "command": "Get-ADDefaultDomainPasswordPolicy | Select-Object PasswordComplexityEnabled"
+    }
+  ]
+}
