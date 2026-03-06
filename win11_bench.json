@@ -1,14 +1,16 @@
 {
   "checks": [
     {
-      "id": "1.1",
-      "name": "Check Guest Account",
-      "command": "Get-LocalUser -Name 'Guest' | Select-Object Name, Enabled"
+      "name": "1 - Account Policies",
+      "command": "Write-Host 'Auditing Account Policies...'; net accounts"
     },
     {
-      "id": "2.1",
-      "name": "Firewall Status",
-      "command": "Get-NetFirewallProfile | Select-Object Name, Enabled"
+      "name": "4 - Restricted Groups",
+      "command": "Write-Host 'Auditing Local Groups...'; net localgroup administrators"
+    },
+    {
+      "name": "9 - Windows Defender Firewall with Advanced Security",
+      "command": "Write-Host 'Auditing Firewall...'; Get-NetFirewallProfile"
     }
   ]
 }
