@@ -1,6 +1,7 @@
 {
   "supported_versions": {
-    "windows_11": "https://raw.githubusercontent.com/nikhil8275/cis-guardian/main/win11_bench.json",
+    "windows_11": "https://raw.githubusercontent.com/.../windows11_rules.json",
     "default": "https://raw.githubusercontent.com/nikhil8275/cis-guardian/main/default_bench.json"
   }
 }
+
